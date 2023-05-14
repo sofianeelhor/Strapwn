@@ -1,4 +1,4 @@
-![strapwn_logo.png](./assets/strapwn_logo.png)
+![strapwn_logo.png](https://cdn.discordapp.com/attachments/1032276231175020564/1107364471824977920/image.png)
 
 
 # **🚀** Description
