@@ -11,6 +11,17 @@ Strapwn is a tool designed to automate the exploitation of Strapi websites.
 
 - Python 3.8
 
+# 🚀 Installation
+
+
+You can download Strapwn directly from this repository. Make sure to install the Python requirements:
+
+```bash
+git clone https://github.com/sofianeelhor/Strapwn.git
+cd Strapwn
+pip install -r requirements.txt
+```
+
 # 📔 Usage
 
 
