@@ -9,7 +9,7 @@ Strapwn is a tool designed to automate the exploitation of Strapi websites.
 # 🐍 Requirements
 
 
-- Python 3.8
+- Python >= 3.8
 
 # 🚀 Installation
 
