@@ -8,6 +8,7 @@ class ApiFuzzer(StrapiExploitInterface):
     '''Strapi API Fuzzer'''
     def __init__(self):
         super().__init__("API Fuzzer", "Find API endpoints")
+        
     def run(self) -> bool:
         url = self.input("URL of the Strapi API (https://example.com/api)")
         if url[-1] == "/":
@@ -21,7 +22,7 @@ class ApiFuzzer(StrapiExploitInterface):
             self.error("Wordlist file does not exist")
             return False
         wordlist = [i.strip() for i in open(wordlist, "r", encoding="latin-1").readlines()]
-        thread = self.input_default("Number of threads (default=10)", 10)
+        thread = int(self.input_default("Number of threads (default=10)", 10))
         self.info(f"Loaded {len(wordlist)} words - {thread} threads")
         run(url, wordlist, thread)
 

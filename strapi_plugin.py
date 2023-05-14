@@ -63,11 +63,13 @@ def choose_plugin(plugins: List[StrapiExploitInterface]) -> None:
             except ValueError:
                 logger.error("Invalid input.")
                 continue
+            display_motd()
+            console = Console()
+            console.print(f"[bold red]Strapwn[/bold red] > [bold yellow]{plugins[choice - 1].get_name()}[/bold yellow]\n\n", justify="center")
             try:
-                display_motd()
-                console = Console()
-                console.print(f"[bold red]Strapwn[/bold red] > [bold yellow]{plugins[choice - 1].get_name()}[/bold yellow]\n\n", justify="center")
                 plugins[choice - 1].run()
-            except Exception as exception:
-                logger.error(f"Unhandled error: {exception.__class__.__name__}")
-                continue
+            except KeyboardInterrupt:
+                cls()
+                display_motd()
+                print_available_plugins(plugins)
+                pass
